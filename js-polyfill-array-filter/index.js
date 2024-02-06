@@ -10,4 +10,13 @@ if (!Array.prototype.filter) {
 
 export function arrayFilter(array, callback) {
   // TODO: Implement the functionality of Array.filter here
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    // callback function evaluates some condition based on the current element ` array[i] `, its index, and the original array, and if that condition is satisfied, the callback function returns true.
+    if (callback(array[i], i, array)) {
+      
+      result.push(array[i]);
+    }
+  }
+  return result;
 }
