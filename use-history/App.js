@@ -3,13 +3,15 @@
 const App = () => {
   const [inputValue, setInputValue] = React.useState('');
   const { state: todos, setState: setTodos, undo, redo, clearHistory } = useHistory([]);
-
+    console.log(todos)
   const addTodo = () => {
     if (inputValue.trim()) {
       // Ideally add you todos to state here.
+      setTodos([...todos,  inputValue ]);
       setInputValue('');
     }
   };
+  const handleInputChange=(e) => setInputValue(e.target.value)
 
   return (
     <div className="flex flex-col p-4 border max-w-min">
@@ -21,13 +23,13 @@ const App = () => {
       <input
       className="border border-black my-3 p-2 rounded"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={handleInputChange}
         placeholder="Enter a todo"
       />
       <button className="rounded border-black border bg-slate-300 px-2" onClick={addTodo}>Add Todo</button>
       <button className="rounded border-black border bg-slate-300 px-2" onClick={clearHistory}>Clear History</button>
 
-      <ul className="flex flex-col border my-5 py-5">
+      <ul className="flex flex-col border my-5 p-5">
         {todos.map((todo, index) => (
           <li key={index}>{todo}</li>
         ))}
