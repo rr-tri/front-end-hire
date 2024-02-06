@@ -11,6 +11,11 @@ const WindowWidthDisplay = () => {
     };
 
     window.addEventListener('resize', handleResize);
+
+    return () => {
+        window.removeEventListener("resize", handleResize); 
+      };
+
   }, []);
 
   return <p>The current window width is: {windowWidth}px</p>;
