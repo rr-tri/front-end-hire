@@ -2,7 +2,7 @@ import { calculateShippingCost } from "./index";
 
 describe("Calculate Shipping Cost", () => {
   
-    
+
   describe('The function returns the correct shipping cost for various weights and destinations.', () => { 
    
     test('400kg For USA', () => { 
@@ -10,7 +10,7 @@ describe("Calculate Shipping Cost", () => {
         .toBe(20);
      })
      test('400kg For Canada', () => { 
-        expect(calculateShippingCost(400,"Canada"))
+        expect(calculateShippingCost(400,"CANADA"))
         .toBe(25);
      })
    

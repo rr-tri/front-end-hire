@@ -1,30 +1,22 @@
 export const calculateShippingCost = (weight, destination) => {
-    let cost;
-    if (destination === 'USA') {
-      if (weight <= 5) {
-        cost = 10;
-      } else if (weight > 5 && weight <= 10) {
-        cost = 15;
-      } else {
-        cost = 20;
-      }
-    } else if (destination === 'Canada') {
-      if (weight <= 5) {
-        cost = 12;
-      } else if (weight > 5 && weight <= 10) {
-        cost = 18;
-      } else {
-        cost = 25;
-      }
-    } else {
-      if (weight <= 5) {
-        cost = 15;
-      } else if (weight > 5 && weight <= 10) {
-        cost = 20;
-      } else {
-        cost = 30;
-      }
-    }
-    return cost;
-  };
-  
+    const rates = {
+        USA: {
+            5: 10,
+            10: 15,
+            Infinity: 20
+        },
+        CANADA: {
+            5: 12,
+            10: 18,
+            Infinity: 25
+        },
+        other: {
+            5: 15,
+            10: 20,
+            Infinity: 30
+        },
+    };
+    const destinationRate = rates[destination] || rates.other;
+    const cost = Object.entries(destinationRate).find(([maxWeight]) => weight <= parseFloat(maxWeight)) || [Infinity, 0];
+    return cost[1];
+};
