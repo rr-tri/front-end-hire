@@ -1,33 +1,33 @@
-const Component = React.Component
 
-class App extends Component {
-  state = { input: "" };
+const AddTodo = ({ addTodo }) => {
+  const [input, setInput] = React.useState("");
 
-  handleChange = (e) => {
-    this.setState({ input: e.target.value });
+  const handleChange = (e) => {
+    setInput(e.target.value);
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addTodo({
-      id: Date.now(),
-      title: this.state.input,
-      completed: false,
-    });
-    this.setState({ input: "" });
+    if(input !== ""){
+      addTodo({
+        id: Date.now(),
+        title: input,
+        completed: false,
+      });
+      setInput("");
+    }
+   
   };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          onChange={this.handleChange}
-          value={this.state.input}
-        />
-        <button type="submit">Add Todo</button>
-      </form>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        onChange={handleChange}
+        value={input}
+      />
+      <button type="submit">Add Todo</button>
+    </form>
+  );
+};
 
