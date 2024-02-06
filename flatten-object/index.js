@@ -11,6 +11,8 @@ export function flattenObject(inputObject) {
     }
     return result;
   }
+  /*
+
   console.log(
     flattenObject({
       id: "123",
@@ -22,3 +24,4 @@ export function flattenObject(inputObject) {
     }),
   );
   
+  */

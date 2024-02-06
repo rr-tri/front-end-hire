@@ -13,6 +13,7 @@ export function filterBy(property) {
     };
 
 }
+/*
 
 // use cases
 const MOCK_DATA = [
@@ -49,3 +50,5 @@ const filterByEmail = filterBy("email");
 const emailFilter = filterByEmail("emily@example.com")(MOCK_DATA);
 
 console.log("filter by name \"emily@example.com\"", emailFilter)
+
+*/
