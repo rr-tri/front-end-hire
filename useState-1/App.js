@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="px-4 py-2">
-      <AddTask onAdd={addTask} />
+      <AddTask onAdd={addTask} setTasks={setTasks}/>
       {tasks.map((task, idx) => (
         <Task
           key={task.id}
@@ -38,7 +38,7 @@ function App() {
 }
 
 // No need to touch the below code!
-function AddTask({ onAdd }) {
+function AddTask({ onAdd,setTasks }) {
   const [task, setTask] = useState("");
 
   const handleAddTask = () => {
@@ -60,6 +60,13 @@ function AddTask({ onAdd }) {
         className="bg-green-500 p-2 border border-green-500 text-white"
       >
         Add
+      </button>
+      <button
+        type="button"
+        onClick={()=>setTasks([])}
+        className="bg-red-500 p-2 border border-green-500 text-white"
+      >
+        Clear all
       </button>
     </div>
   );

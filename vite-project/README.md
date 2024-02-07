@@ -1,5 +1,6 @@
 # ToDoApp
-![ESLint](https://img.shields.io/badge/ESLint-00b300)![Husky](https://img.shields.io/badge/Husky-668cff)![Prettier](https://img.shields.io/badge/Prettier-ff8000)![React](https://img.shields.io/badge/React-000099)![Vite](https://img.shields.io/badge/Vite-e6e600)![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-008fb3)
+
+![ESLint](https://img.shields.io/badge/ESLint-00b300)   ![Husky](https://img.shields.io/badge/Husky-668cff)   ![Prettier](https://img.shields.io/badge/Prettier-ff8000)   ![React](https://img.shields.io/badge/React-000099)   ![Vite](https://img.shields.io/badge/Vite-e6e600)   ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-008fb3)
 
 ## Table of Contents
 
@@ -9,10 +10,19 @@
 
 ## About
 
-Basic app to create,edit,modify and delete tasks that persists in localStorage.
+Basic app to create, edit, modify and delete tasks that persists in localStorage.
 
-          
+Task Management Features
 
+- Create Task: Functionality to add a new task.
+
+- Update Task: Ability to modify an existing task.
+
+- Delete Task: Option to remove a task.
+
+- Complete Task: Feature to mark a task as completed.
+
+- The task data persists between page reloads using local storage.
 
 ## Demo
 
@@ -21,7 +31,6 @@ Basic app to create,edit,modify and delete tasks that persists in localStorage.
 ## Installation
 
 Instructions on how to install and run your project locally. Include any prerequisites and step-by-step instructions.
-
 
 ```bash
 git clone https://github.com/rr-tri/front-end-hire/tree/main/vite-project
