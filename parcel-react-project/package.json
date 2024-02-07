@@ -1,0 +1,29 @@
+{
+    "name": "parcel-react-project",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "rr-tri",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.17",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-react": "^7.33.2",
+        "flow-bin": "^0.228.0",
+        "husky": "^9.0.10",
+        "lint-staged": "^15.2.2",
+        "postcss": "^8.4.34",
+        "prettier": "3.2.5",
+        "tailwindcss": "^3.4.1"
+    },
+    "scripts": {
+        "prepare": "husky"
+    }
+}
