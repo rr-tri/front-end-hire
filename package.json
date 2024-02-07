@@ -14,7 +14,7 @@
   "license": "ISC",
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
-    "verbose":true,
+    "verbose": true,
     "testMatch": [
       "**/*.test.js"
     ],
